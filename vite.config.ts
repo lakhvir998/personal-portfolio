@@ -6,10 +6,4 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   base: process.env.GITHUB_PAGES === 'true' ? '/personal-portfolio/' : '/',
   plugins: [react(), tailwindcss()],
-  test: {
-    environment: 'jsdom',
-    setupFiles: './src/setupTests.ts',
-    globals: true,
-    css: true,
-  },
 });
