@@ -96,6 +96,11 @@ export const socialLinks: readonly SocialLink[] = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/lakhvirkumar998/',
   },
+  {
+    id: 'upwork',
+    label: 'Upwork',
+    href: 'https://www.upwork.com/freelancers/~01a73f44e9e00025fe',
+  },
 ];
 
 /**

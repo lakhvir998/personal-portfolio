@@ -37,7 +37,7 @@ const App = () => (
       <ProjectsSection projects={projects} />
       <ContactSection profile={profile} />
     </main>
-    <AppFooter socials={socialLinks} />
+    <AppFooter socials={socialLinks} profileName={profile.name} />
   </div>
 );
 
