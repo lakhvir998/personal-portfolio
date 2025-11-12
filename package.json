@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
   "private": true,
+  "homepage": "https://lakhvir998.github.io/personal-portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
