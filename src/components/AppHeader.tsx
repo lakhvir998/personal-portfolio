@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ReactGA from 'react-ga4';
 import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { cn } from '../lib/cn';
@@ -79,7 +80,18 @@ export const AppHeader = ({ profile, links }: AppHeaderProps) => {
           ))}
         </ul>
 
-        <Button href={`mailto:${profile.email}`} size='md' variant='secondary'>
+        <Button
+          href={`mailto:${profile.email}`}
+          size='md'
+          variant='secondary'
+          onClick={() => {
+            ReactGA.event({
+              category: 'Button',
+              action: 'Click',
+              label: "Let's talk",
+            });
+          }}
+        >
           Let's talk
         </Button>
       </nav>

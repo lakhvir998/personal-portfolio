@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
+import ReactGA from 'react-ga4';
 import { Button } from '../components/Button';
 import { ArrowUpRightIcon } from '../components/icons';
 import { PageSection } from '../components/PageSection';
@@ -131,6 +132,13 @@ export const HeroSection = ({ profile, socials }: HeroSectionProps) => {
           <Button
             href={`mailto:${profile.email}`}
             icon={<ArrowUpRightIcon className='size-4' />}
+            onClick={() => {
+              ReactGA.event({
+                category: 'Button',
+                action: 'Click',
+                label: "Let's build together",
+              });
+            }}
           >
             Let's build together
           </Button>

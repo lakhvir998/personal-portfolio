@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga4';
 import { Button } from '../components/Button';
 import { SectionHeading } from '../components/SectionHeading';
 import { PageSection } from '../components/PageSection';
@@ -29,7 +30,18 @@ export const ContactSection = ({ profile }: ContactSectionProps) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <Button href={`mailto:${profile.email}`} size='lg' variant='primary'>
+        <Button
+          href={`mailto:${profile.email}`}
+          size='lg'
+          variant='primary'
+          onClick={() => {
+            ReactGA.event({
+              category: 'Button',
+              action: 'Click',
+              label: 'Start a conversation',
+            });
+          }}
+        >
           Start a conversation
         </Button>
         <span className='text-sm font-medium text-white/50'>
